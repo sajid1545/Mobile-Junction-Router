@@ -3,7 +3,7 @@ import Phone from '../Phone/Phone';
 
 const Phones = () => {
     const [phones, setPhones] = useState([]);
-	const [search, setSearch] = useState('');
+	const [search, setSearch] = useState('apple');
     
 
 	useEffect(() => {
