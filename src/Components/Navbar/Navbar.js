@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/solid';
 
 const Navbar = () => {
 	const [open, setOpen] = useState(false);
 
 	return (
-		<nav className='w-full relative'>
+		<nav className="w-full relative">
 			<div onClick={() => setOpen(!open)} className="h-6 w-6 text-black-500 md:hidden  ">
 				{open ? <XMarkIcon></XMarkIcon> : <Bars3Icon></Bars3Icon>}
 			</div>
@@ -21,13 +21,25 @@ const Navbar = () => {
 					alt=""
 				/>
 				<li>
-					<Link to={`/home`}>Home</Link>
+					<NavLink
+						className={({ isActive }) => (isActive ? 'text-red-500 font-extrabold underline' : undefined)}
+						to={`/home`}>
+						Home
+					</NavLink>
 				</li>
 				<li>
-					<Link to={`/phones`}>Phones</Link>
+					<NavLink
+						className={({ isActive }) => (isActive ? 'text-red-500 font-extrabold underline' : undefined)}
+						to={`/phones`}>
+						Phones
+					</NavLink>
 				</li>
 				<li>
-					<Link to={`/about`}>About</Link>
+					<NavLink
+						className={({ isActive }) => (isActive ? 'text-red-500 font-extrabold underline' : undefined)}
+						to={`/about`}>
+						About
+					</NavLink>
 				</li>
 			</ul>
 		</nav>

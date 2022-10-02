@@ -1,4 +1,5 @@
 import { createBrowserRouter } from "react-router-dom";
+import About from "../Components/About/About";
 import Header from "../Components/Header/Header";
 import Home from "../Components/Home/Home";
 import PhoneDetails from "../Components/PhoneDetails/PhoneDetails";
@@ -28,6 +29,10 @@ export const router = createBrowserRouter([
                     return fetch(`https://openapi.programming-hero.com/api/phone/${params.id}`)
                 },
                 element : <PhoneDetails></PhoneDetails>
+            },
+            {
+                path: '/about',
+                element: <About></About>
             }
         ]
     }
