@@ -18,6 +18,7 @@ export const router = createBrowserRouter([
             },
             {
                 path: '/phones',
+                
                 element : <Phones></Phones>
             }
         ]
